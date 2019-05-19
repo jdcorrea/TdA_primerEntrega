@@ -1,0 +1,36 @@
+Creado por: Juan David Correa Cano.
+
+Bienvenido al manual de uso de la primera entrega del curso de NodeJs del tecnológico de antioquia.
+
+Para hacer un uso correcto del programa se deben cumplir con los siguientes prerequisitos.
+
+1-->  Tener instalado nodejs en la máquina.
+  1.1 --> Como vertifico si lo tengo instalado?
+      R/: ejecutar el siguiente comando el consola de comandos: "node --version", debería retornar la versión instalada, en caso contrario se debe instalar.
+  1.2 --> Donde puedo obtener la última versión de NodeJs?
+      R/: "https://nodejs.org".
+
+2-->  Debe tener instaladas las dependencias necesarias para la correcta ejecución del programa.
+  2.1 --> Instalar "yargs" através de npm.
+    2.1.1 --> Comando de instalación: "npm i yargs".
+    2.1.2 --> Página oficial: "https://www.npmjs.com/package/yargs".
+
+
+Como utilizar el programa?
+
+1.  Para listar los cursos solo debe ejecutar el programa sin parámetros de inicio:
+    "node primerEntrega"
+
+2.  Para inscribir un estudiante a un curso se debe ejecutar con los siguientes parámetros:
+    - opcion: "inscribir" (Hace referencia a la opción que será ejecutada).
+    - id curso: "-i=X" (Donde X corresponde al id del curso al cual desea inscribirse).
+    - nombre usuario: "-n=XXXXX" (Donde las X corresponde la nombre del usuario que desea inscribirse. Nota: El programa soporta solo una palabra para el nombre).
+    - cédula del usuario: "-x=XXXXXX" (Donde las X corresponde el número de identificación del usuario que desea inscribirse).
+
+    - ejemplo: "primerEntrega inscribir -i=2 -n=juan -x=1034"
+
+Notas:
+  --  El programa crea un archivo "usuariosInscritos.txt" automáticamente la inscribir el primer usuario en el sistema.
+  --  El programa irá agregando registros al archivo "usuariosInscritos.txt" conforme se sigan inscribiendo usuarios al sistema.
+  --  Si en el parámetro "opcion" del programa se envía al diferente a "inscribir", el programa hará caso omiso del parámetro y listará los cursos disponibles.
+  --  Los parámetros de curso (id) y usuario (cédula, nombre) son obligatorios, el programa notificará en caso de que no se referencien en los parámetros de inicio.
