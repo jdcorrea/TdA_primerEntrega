@@ -72,7 +72,6 @@ function inscribirAlCurso() {
     console.log('Ha ingresado un ID que no corresponde a ningún curso.');
     listarCursos(cursos);
   } else {
-    console.log(existeId);
     guardarUsuarioCurso(descripcionUsuario(argv), descripcionCurso(existeId));
   }
 }
