@@ -55,7 +55,7 @@ function listarCursos(listaCursos) {
   console.log('Bienvenidos a los cursos ofertados por educación continua, este es el listado de cursos disponibles: ');
 
   for(let i = 0; i < listaCursos.length; i++) {
-    timerDelay += 1000;
+    timerDelay += 2000;
     setTimeout(() => {
       let descripcion = descripcionCurso(listaCursos[i]);
       console.log(descripcion);
