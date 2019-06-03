@@ -11,9 +11,12 @@ Para hacer un uso correcto del programa se deben cumplir con los siguientes prer
       R/: "https://nodejs.org".
 
 2-->  Debe tener instaladas las dependencias necesarias para la correcta ejecución del programa.
-  2.1 --> Instalar "yargs" através de npm.
+  2.1 --> Instalar "yargs" a través de npm.
     2.1.1 --> Comando de instalación: "npm i yargs".
     2.1.2 --> Página oficial: "https://www.npmjs.com/package/yargs".
+  2.2 --> Instalar "expressjs" a través de npm.
+    2.2.1 --> Comando de instalación: "npm i express".
+    2.2.2 --> Página oficial: "https://expressjs.com/es/".
 
 
 Como utilizar el programa?
