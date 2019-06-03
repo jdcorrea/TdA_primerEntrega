@@ -34,3 +34,4 @@ Notas:
   --  El programa irá agregando registros al archivo "usuariosInscritos.txt" conforme se sigan inscribiendo usuarios al sistema.
   --  Si en el parámetro "opcion" del programa se envía al diferente a "inscribir", el programa hará caso omiso del parámetro y listará los cursos disponibles.
   --  Los parámetros de curso (id) y usuario (cédula, nombre) son obligatorios, el programa notificará en caso de que no se referencien en los parámetros de inicio.
+  --  El programa mostrará en una página HTML los datos de quién se inscribió a un curso y los detalles del curso.

@@ -1,6 +1,9 @@
 // Creado por: Juan David Correa Cano
 
 const fs = require('fs');
+const express = require('express')
+const app = express()
+
 const parametrosIngreso = {
   id: {
     demand: true,
@@ -98,7 +101,7 @@ function guardarUsuarioCurso(usuarioGuardar, cursoGuardar) {
 
   let informacionGuardar =  '->>> Se ha registrado exitosamente al curso: ' + '\n' +
                             usuarioGuardar + '\n' +
-                            '-> Curso;' + '\n' +
+                            '-> Curso: ' + '\n' +
                             cursoGuardar + '\n';
 
   if (!fs.existsSync('./usuariosInscritos.txt')) {
@@ -112,4 +115,27 @@ function guardarUsuarioCurso(usuarioGuardar, cursoGuardar) {
           console.log('Se ha agregado al archivo de registros.');
     });
   }
+
+  mostrarEnWeb(informacionGuardar);
+}
+
+function mostrarEnWeb(textoMostrar) {
+  app.get('/', function (req, res) {
+
+    let textformat = function() {
+      let textArray = textoMostrar.split("\n");
+      console.log(textArray);
+      let webText = '';
+      textArray.forEach(element => {
+        console.log(element);
+        webText += '</br> ' + element;
+      });
+      return webText;
+    }
+    console.log(textformat());
+
+    res.send(textformat());
+  })
+  
+  app.listen(3000);
 }
